@@ -7,16 +7,19 @@ const posts = [
     title: "How I design release pipelines that are boring in production",
     date: "April 2026",
     readTime: "6 min read",
+    href: "#",
   },
   {
     title: "The small observability decisions that save big incidents",
     date: "March 2026",
     readTime: "8 min read",
+    href: "#",
   },
   {
     title: "Backend performance work that starts long before profiling",
     date: "February 2026",
     readTime: "5 min read",
+    href: "#",
   },
 ];
 
@@ -67,6 +70,13 @@ export default function BlogSection() {
                 {post.title}
               </h3>
               <p className="mt-4 text-sm text-white/[0.55]">{post.readTime}</p>
+              <a
+                href={post.href}
+                className="mt-5 inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white/[0.9] transition hover:border-white/20 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-hotPink focus-visible:ring-offset-2 focus-visible:ring-offset-[#050816]"
+                aria-label={`Read article: ${post.title}`}
+              >
+                Read article
+              </a>
             </motion.article>
           ))}
         </motion.div>
