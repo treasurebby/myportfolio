@@ -98,16 +98,18 @@ export default function ProjectsSection() {
                   <a
                     href={project.github}
                     target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white/[0.85] transition hover:border-white/20 hover:bg-white/10"
+                    rel="noopener noreferrer"
+                    aria-label={`View ${project.name} on GitHub`}
+                    className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white/[0.85] transition hover:border-white/20 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-hotPink focus-visible:ring-offset-2 focus-visible:ring-offset-[#050816]"
                   >
                     GitHub
                   </a>
                   <a
                     href={project.live}
                     target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-hotPink to-electricPurple px-4 py-2 text-sm font-semibold text-white shadow-glow transition hover:brightness-110"
+                    rel="noopener noreferrer"
+                    aria-label={`Open the live demo for ${project.name}`}
+                    className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-hotPink to-electricPurple px-4 py-2 text-sm font-semibold text-white shadow-glow transition hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-hotPink focus-visible:ring-offset-2 focus-visible:ring-offset-[#050816]"
                   >
                     Live demo
                   </a>
