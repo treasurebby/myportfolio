@@ -55,26 +55,37 @@ export default function ContactSection() {
             <label className="grid gap-2 text-sm text-white/[0.70]">
               Name
               <input
+                id="name"
+                name="name"
                 type="text"
                 placeholder="Your name"
+                autoComplete="name"
+                required
                 className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none transition placeholder:text-white/[0.35] focus:border-white/20 focus:bg-white/[0.08]"
               />
             </label>
             <label className="grid gap-2 text-sm text-white/[0.70]">
               Email
               <input
+                id="email"
+                name="email"
                 type="email"
                 placeholder="you@example.com"
+                autoComplete="email"
+                required
                 className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none transition placeholder:text-white/[0.35] focus:border-white/20 focus:bg-white/[0.08]"
               />
             </label>
             <label className="grid gap-2 text-sm text-white/[0.70]">
               Message
               <textarea
+                id="message"
+                name="message"
                 value={message}
                 onChange={(event) => setMessage(event.target.value)}
                 placeholder="Tell me what you&apos;re building..."
                 rows={5}
+                required
                 className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none transition placeholder:text-white/[0.35] focus:border-white/20 focus:bg-white/[0.08]"
               />
             </label>
