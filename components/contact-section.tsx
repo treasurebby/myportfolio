@@ -1,0 +1,97 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { useState } from "react";
+
+const formVariants = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0 },
+};
+
+const buttonVariants = {
+  rest: { scale: 1 },
+  hover: { scale: 1.02 },
+  tap: { scale: 0.98 },
+};
+
+export default function ContactSection() {
+  const [message, setMessage] = useState("");
+
+  return (
+    <section id="contact" data-cinematic-section className="px-6 py-24 sm:px-10 lg:px-12">
+      <div className="mx-auto grid w-full max-w-7xl gap-10 lg:grid-cols-[1.1fr,0.9fr]">
+        <div className="max-w-2xl">
+          <p className="text-sm uppercase tracking-[0.4em] text-white/[0.45]">Contact</p>
+          <h2 className="mt-4 font-display text-4xl font-black tracking-[-0.05em] text-white sm:text-5xl">
+            Let&apos;s build the next platform, service, or delivery pipeline.
+          </h2>
+          <p className="mt-6 text-base leading-8 text-white/[0.72] sm:text-lg">
+            Share the problem, the constraints, and the timeline. I&apos;ll respond with a practical plan
+            and the shortest path to a reliable result.
+          </p>
+
+          <div className="mt-8 flex flex-wrap gap-4 text-sm text-white/[0.70]">
+            <a className="transition hover:text-white" href="https://github.com/your-handle" target="_blank" rel="noreferrer">
+              GitHub
+            </a>
+            <a className="transition hover:text-white" href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noreferrer">
+              LinkedIn
+            </a>
+            <a className="transition hover:text-white" href="https://x.com/your-handle" target="_blank" rel="noreferrer">
+              Twitter
+            </a>
+          </div>
+        </div>
+
+        <motion.form
+          variants={formVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          onSubmit={(event) => event.preventDefault()}
+          className="glass-panel rounded-[1.75rem] p-6"
+        >
+          <div className="grid gap-4">
+            <label className="grid gap-2 text-sm text-white/[0.70]">
+              Name
+              <input
+                type="text"
+                placeholder="Your name"
+                className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none transition placeholder:text-white/[0.35] focus:border-white/20 focus:bg-white/[0.08]"
+              />
+            </label>
+            <label className="grid gap-2 text-sm text-white/[0.70]">
+              Email
+              <input
+                type="email"
+                placeholder="you@example.com"
+                className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none transition placeholder:text-white/[0.35] focus:border-white/20 focus:bg-white/[0.08]"
+              />
+            </label>
+            <label className="grid gap-2 text-sm text-white/[0.70]">
+              Message
+              <textarea
+                value={message}
+                onChange={(event) => setMessage(event.target.value)}
+                placeholder="Tell me what you&apos;re building..."
+                rows={5}
+                className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none transition placeholder:text-white/[0.35] focus:border-white/20 focus:bg-white/[0.08]"
+              />
+            </label>
+          </div>
+
+          <motion.button
+            type="submit"
+            variants={buttonVariants}
+            initial="rest"
+            whileHover="hover"
+            whileTap="tap"
+            className="mt-5 inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-hotPink to-electricPurple px-5 py-3 text-sm font-semibold text-white shadow-glow transition hover:brightness-110"
+          >
+            Send message
+          </motion.button>
+        </motion.form>
+      </div>
+    </section>
+  );
+}
