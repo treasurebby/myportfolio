@@ -13,9 +13,9 @@ const bodyFont = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Your Name | Cloud, DevOps & Backend Engineer",
+  title: "Ehiomhen Treasure | Cloud, DevOps & Backend Engineer",
   description:
-    "A cinematic personal portfolio for a Software Engineer focused on cloud, DevOps, and backend systems.",
+    "Cinematic portfolio for Ehiomhen Treasure, a Cloud and Web Engineer focused on resilient infrastructure, backend systems, and polished web experiences.",
 };
 
 export default function RootLayout({
