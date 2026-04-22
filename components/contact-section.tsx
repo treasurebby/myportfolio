@@ -16,6 +16,7 @@ const buttonVariants = {
 
 export default function ContactSection() {
   const [message, setMessage] = useState("");
+  const [hasSubmitted, setHasSubmitted] = useState(false);
 
   return (
     <section id="contact" data-cinematic-section className="px-6 py-24 sm:px-10 lg:px-12">
@@ -48,7 +49,10 @@ export default function ContactSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
-          onSubmit={(event) => event.preventDefault()}
+          onSubmit={(event) => {
+            event.preventDefault();
+            setHasSubmitted(true);
+          }}
           className="glass-panel rounded-[1.75rem] p-6"
         >
           <div className="grid gap-4">
@@ -101,6 +105,12 @@ export default function ContactSection() {
           >
             Send message
           </motion.button>
+
+          {hasSubmitted ? (
+            <p className="mt-4 text-sm text-white/[0.68]">
+              Thanks for reaching out. For a faster response, email me directly at ehiomhentreasureruth@gmail.com.
+            </p>
+          ) : null}
         </motion.form>
       </div>
     </section>
