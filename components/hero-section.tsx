@@ -87,9 +87,9 @@ export default function HeroSection({ particleBackground }: HeroSectionProps) {
             className="flex flex-col gap-4 sm:flex-row sm:flex-wrap"
           >
             {[
-              { label: "GitHub", href: "https://github.com/your-handle" },
-              { label: "LinkedIn", href: "https://www.linkedin.com/in/your-handle" },
-              { label: "Twitter", href: "https://x.com/your-handle" },
+              { label: "GitHub", href: "https://github.com/treasurebby" },
+              { label: "LinkedIn", href: "https://www.linkedin.com/in/ehiomhen-treasure-889a4b298" },
+              { label: "Email", href: "mailto:ehiomhentreasureruth@gmail.com" },
               { label: "Download CV", href: "/cv-placeholder.pdf", download: true },
             ].map((button) => (
               <motion.a
@@ -97,7 +97,7 @@ export default function HeroSection({ particleBackground }: HeroSectionProps) {
                 href={button.href}
                 download={button.download}
                 target={button.download ? undefined : "_blank"}
-                rel={button.download ? undefined : "noreferrer"}
+                rel={button.download ? undefined : "noopener noreferrer"}
                 variants={buttonVariants}
                 initial="rest"
                 whileHover="hover"
