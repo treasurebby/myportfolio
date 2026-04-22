@@ -12,7 +12,10 @@ const bodyFont = IBM_Plex_Sans({
   subsets: ["latin"],
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://myportfolio.vercel.app";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Ehiomhen Treasure | Cloud, DevOps & Backend Engineer",
   description:
     "Cinematic portfolio for Ehiomhen Treasure, a cloud, backend, and DevOps engineer focused on production-ready systems, resilient infrastructure, and scalable web applications.",
