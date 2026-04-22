@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useState, type ReactNode } from "react";
+import type { ReactNode } from "react";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -42,8 +42,6 @@ type HeroSectionProps = {
 };
 
 export default function HeroSection({ particleBackground }: HeroSectionProps) {
-  const [isProfileImageAvailable, setIsProfileImageAvailable] = useState(true);
-
   return (
     <section
       id="home"
@@ -55,7 +53,7 @@ export default function HeroSection({ particleBackground }: HeroSectionProps) {
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,8,22,0.1),rgba(5,8,22,0.78)_80%,rgba(5,8,22,0.98))]" />
 
       <motion.div
-        className="relative mx-auto grid w-full max-w-7xl gap-10 px-6 py-28 sm:px-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-14 lg:px-12"
+        className="relative mx-auto flex w-full max-w-5xl flex-col gap-10 px-6 py-28 sm:px-10 lg:px-12"
         variants={containerVariants}
         initial="hidden"
         animate="show"
@@ -73,9 +71,20 @@ export default function HeroSection({ particleBackground }: HeroSectionProps) {
             <p className="mb-4 text-sm uppercase tracking-[0.45em] text-white/[0.45]">
               Cloud and Web Engineer
             </p>
-            <h1 className="max-w-4xl font-display text-5xl font-black leading-[0.92] tracking-[-0.06em] text-white sm:text-6xl lg:text-[5.9rem]">
-              <span className="gradient-text bg-clip-text text-transparent">Ehiomhen Treasure</span>
-            </h1>
+            <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
+              <div className="relative h-16 w-16 overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-[0_16px_40px_rgba(8,12,40,0.35)] sm:h-20 sm:w-20">
+                <Image
+                  src="/portrait.jpg"
+                  alt="Portrait of Ehiomhen Treasure"
+                  fill
+                  priority
+                  className="object-cover object-center"
+                />
+              </div>
+              <h1 className="max-w-4xl font-display text-4xl font-black leading-[0.95] tracking-[-0.06em] text-white sm:text-5xl lg:text-[4.6rem]">
+                <span className="gradient-text bg-clip-text text-transparent">Ehiomhen Treasure</span>
+              </h1>
+            </div>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-white/[0.72] sm:text-xl">
               I design and ship resilient cloud infrastructure and web platforms with smooth user
               experiences, strong reliability, and room to scale.
@@ -154,27 +163,6 @@ export default function HeroSection({ particleBackground }: HeroSectionProps) {
             </motion.div>
           </motion.div>
         </div>
-
-        <motion.div variants={itemVariants} className="mx-auto w-full max-w-md lg:max-w-none lg:justify-self-end">
-          <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-2 shadow-[0_24px_70px_rgba(8,12,40,0.55)] backdrop-blur-sm">
-            <div className="absolute -left-20 top-8 h-36 w-36 rounded-full bg-hotPink/20 blur-3xl" />
-            <div className="absolute -bottom-16 right-2 h-44 w-44 rounded-full bg-electricPurple/20 blur-3xl" />
-            <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] border border-white/10 bg-[#10142a]">
-              {isProfileImageAvailable ? (
-                <Image
-                  src="/treasure-profile.jpg"
-                  alt="Portrait of Ehiomhen Treasure"
-                  fill
-                  priority
-                  onError={() => setIsProfileImageAvailable(false)}
-                  className="object-cover object-center"
-                />
-              ) : (
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(236,72,153,0.24),transparent_45%),radial-gradient(circle_at_80%_80%,rgba(124,58,237,0.3),transparent_48%),linear-gradient(180deg,#0f1226,#090b1c)]" />
-              )}
-            </div>
-          </div>
-        </motion.div>
       </motion.div>
     </section>
   );
