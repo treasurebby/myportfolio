@@ -32,7 +32,7 @@ npm run dev
 	- GitHub: https://github.com/treasurebby
 	- LinkedIn: https://www.linkedin.com/in/ehiomhen-treasure-889a4b298
 	- Email: ehiomhentreasureruth@gmail.com
-- Replace `public/cv-placeholder.pdf` with your real CV file.
+- The uploaded CV is [public/ehiomhen-treasure-cv.pdf.pdf](public/ehiomhen-treasure-cv.pdf.pdf).
 - Update the project and article placeholders with your own work before publishing.
 
 ## Scripts

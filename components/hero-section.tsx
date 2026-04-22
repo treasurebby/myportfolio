@@ -90,7 +90,7 @@ export default function HeroSection({ particleBackground }: HeroSectionProps) {
               { label: "GitHub", href: "https://github.com/treasurebby" },
               { label: "LinkedIn", href: "https://www.linkedin.com/in/ehiomhen-treasure-889a4b298" },
               { label: "Email", href: "mailto:ehiomhentreasureruth@gmail.com" },
-              { label: "Download CV", href: "/cv-placeholder.pdf", download: true },
+              { label: "Download CV", href: "/ehiomhen-treasure-cv.pdf.pdf", download: true },
             ].map((button) => (
               <motion.a
                 key={button.label}
