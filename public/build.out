@@ -1,0 +1,35 @@
+
+> portfolio@0.1.0 build
+> next build --webpack
+
+▲ Next.js 16.2.4 (webpack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 2.8s
+  Running TypeScript ...
+Failed to type check.
+
+./components/hero-section.tsx:163:15
+Type error: Type '{ float: { y: number[]; transition: { duration: number; repeat: number; ease: number[]; }; }; }' is not assignable to type 'Variants'.
+  Property 'float' is incompatible with index signature.
+    Type '{ y: number[]; transition: { duration: number; repeat: number; ease: number[]; }; }' is not assignable to type 'Variant'.
+      Type '{ y: number[]; transition: { duration: number; repeat: number; ease: number[]; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ y: number[]; transition: { duration: number; repeat: number; ease: number[]; }; }' is not assignable to type '{ transition?: Transition<any> | undefined; transitionEnd?: ResolvedValues$1 | undefined; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; repeat: number; ease: number[]; }' is not assignable to type 'Transition<any> | undefined'.
+              Type '{ duration: number; repeat: number; ease: number[]; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; repeat: number; ease: number[]; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'number[]' is not assignable to type 'Easing | Easing[] | undefined'.
+                      Type 'number[]' is not assignable to type 'EasingFunction | Easing[]'.
+                        Type 'number[]' is not assignable to type 'Easing[]'.
+                          Type 'number' is not assignable to type 'Easing'.
+
+  [90m161 |[0m             <motion.div
+  [90m162 |[0m               aria-hidden=[32m"true"[0m
+[31m[1m>[0m [90m163 |[0m               variants={indicatorVariants}
+  [90m    |[0m               [31m[1m^[0m
+  [90m164 |[0m               initial=[32m"float"[0m
+  [90m165 |[0m               animate=[32m"float"[0m
+  [90m166 |[0m               className=[32m"h-10 w-6 rounded-full border border-slate-400/35"[0m
+Next.js build worker exited with code: 1 and signal: null

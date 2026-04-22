@@ -26,17 +26,6 @@ const buttonVariants = {
   tap: { scale: 0.98 },
 };
 
-const indicatorVariants = {
-  float: {
-    y: [0, 8, 0],
-    transition: {
-      duration: 1.8,
-      repeat: Number.POSITIVE_INFINITY,
-      ease: "easeInOut",
-    },
-  },
-};
-
 type HeroSectionProps = {
   particleBackground: ReactNode;
 };
@@ -160,9 +149,12 @@ export default function HeroSection({ particleBackground }: HeroSectionProps) {
             </a>
             <motion.div
               aria-hidden="true"
-              variants={indicatorVariants}
-              initial="float"
-              animate="float"
+              animate={{ y: [0, 8, 0] }}
+              transition={{
+                duration: 1.8,
+                repeat: Number.POSITIVE_INFINITY,
+                ease: "easeInOut",
+              }}
               className="h-10 w-6 rounded-full border border-slate-400/35"
             >
               <div className="mx-auto mt-2 h-2 w-1 rounded-full bg-[#E2E8F0]" />
