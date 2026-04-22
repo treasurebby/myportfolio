@@ -61,16 +61,20 @@ export default function TimelineSection() {
             className="absolute left-2 top-2 h-full w-px origin-top bg-gradient-to-b from-hotPink via-white/40 to-electricPurple sm:left-4"
           />
 
-          {timeline.map((entry) => (
-            <motion.article key={entry.period} variants={itemVariants} className="relative glass-panel rounded-[1.5rem] p-6">
-              <span className="absolute -left-[0.95rem] top-7 h-4 w-4 rounded-full border border-white/20 bg-hotPink shadow-[0_0_25px_rgba(236,72,153,0.8)] sm:-left-[1.15rem]" />
-              <p className="text-xs uppercase tracking-[0.35em] text-white/[0.40]">{entry.period}</p>
-              <h3 className="mt-3 font-display text-2xl font-black tracking-[-0.04em] text-white">
-                {entry.title}
-              </h3>
-              <p className="mt-3 max-w-3xl text-sm leading-7 text-white/[0.68]">{entry.description}</p>
-            </motion.article>
-          ))}
+          <ol className="grid gap-6" aria-label="Experience timeline">
+            {timeline.map((entry) => (
+              <li key={entry.period}>
+                <motion.article variants={itemVariants} className="relative glass-panel rounded-[1.5rem] p-6">
+                  <span className="absolute -left-[0.95rem] top-7 h-4 w-4 rounded-full border border-white/20 bg-hotPink shadow-[0_0_25px_rgba(236,72,153,0.8)] sm:-left-[1.15rem]" />
+                  <p className="text-xs uppercase tracking-[0.35em] text-white/[0.40]">{entry.period}</p>
+                  <h3 className="mt-3 font-display text-2xl font-black tracking-[-0.04em] text-white">
+                    {entry.title}
+                  </h3>
+                  <p className="mt-3 max-w-3xl text-sm leading-7 text-white/[0.68]">{entry.description}</p>
+                </motion.article>
+              </li>
+            ))}
+          </ol>
         </motion.div>
       </div>
     </section>
