@@ -4,24 +4,31 @@ import { motion } from "framer-motion";
 
 const timeline = [
   {
-    period: "2024 - Present",
-    title: "Senior Software Engineer",
-    description:
-      "Lead cloud modernization, observability, and delivery improvements across backend services and platform tooling.",
+    period: "August 2025 - September 2025",
+    title: "Cloud and DevOps Intern",
+    organization: "Covenda AI",
+    highlights: [
+      "Configured AWS Cognito and integrated with Amplify Auth for secure authentication in a React application.",
+      "Reduced cloud costs by auditing and removing unused AWS resources across multiple regions.",
+      "Developed a Next.js platform homepage and wrote technical documentation for authentication workflows and ML architecture.",
+    ],
   },
   {
-    period: "2021 - 2024",
-    title: "DevOps / Backend Engineer",
-    description:
-      "Built resilient services, automated infrastructure, and tightened deployment reliability for high-growth teams.",
-  },
-  {
-    period: "2018 - 2021",
-    title: "Software Engineer",
-    description:
-      "Shipped APIs, background workers, and internal systems while learning how to keep systems calm under load.",
+    period: "March 2025",
+    title: "Deloitte Australia Cyber Job Simulation",
+    organization: "Forage Platform",
+    highlights: [
+      "Analyzed web server logs, investigated suspicious activity, and applied cybersecurity frameworks to recommend remediation steps.",
+    ],
   },
 ];
+
+const education = {
+  period: "2023 - 2027",
+  degree: "Bachelor's Degree in Computer Science",
+  school: "Covenant University",
+  cgpa: "4.90/5.00",
+};
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -43,9 +50,9 @@ export default function TimelineSection() {
     <section id="experience" data-cinematic-section className="border-b border-white/5 px-6 py-24 sm:px-10 lg:px-12">
       <div className="mx-auto w-full max-w-7xl">
         <div className="mb-10 max-w-3xl">
-          <p className="text-sm uppercase tracking-[0.4em] text-[#64748B]">Experience timeline</p>
+          <p className="text-sm uppercase tracking-[0.4em] text-[#64748B]">Professional Experience</p>
           <h2 className="mt-4 font-display text-4xl font-black tracking-[-0.05em] text-[#F8FAFC] sm:text-5xl">
-            Career moves shaped by shipping, scaling, and stabilizing systems.
+            Hands-on cloud, DevOps, and cybersecurity experience.
           </h2>
         </div>
 
@@ -61,20 +68,36 @@ export default function TimelineSection() {
             className="absolute left-2 top-2 h-full w-px origin-top bg-gradient-to-b from-[#E2E8F0] via-[#94A3B8] to-[#475569] sm:left-4"
           />
 
-          <ol className="grid gap-6" aria-label="Experience timeline">
+          <ol className="grid gap-6" aria-label="Professional experience timeline">
             {timeline.map((entry) => (
-              <li key={entry.period}>
+              <li key={`${entry.period}-${entry.title}`}>
                 <motion.article variants={itemVariants} className="relative glass-panel rounded-[1.5rem] p-6">
                   <span className="absolute -left-[0.95rem] top-7 h-4 w-4 rounded-full border border-slate-400/40 bg-[#E2E8F0] shadow-[0_0_25px_rgba(148,163,184,0.4)] sm:-left-[1.15rem]" />
                   <p className="text-xs uppercase tracking-[0.35em] text-[#64748B]">{entry.period}</p>
                   <h3 className="mt-3 font-display text-2xl font-black tracking-[-0.04em] text-[#F8FAFC]">
                     {entry.title}
                   </h3>
-                  <p className="mt-3 max-w-3xl text-sm leading-7 text-[#CBD5E1]">{entry.description}</p>
+                  <p className="mt-2 text-sm font-semibold text-[#94A3B8]">{entry.organization}</p>
+                  <ul className="mt-3 grid gap-2 text-sm leading-7 text-[#CBD5E1]">
+                    {entry.highlights.map((highlight) => (
+                      <li key={highlight}>- {highlight}</li>
+                    ))}
+                  </ul>
                 </motion.article>
               </li>
             ))}
           </ol>
+
+          <motion.article variants={itemVariants} className="glass-panel rounded-[1.5rem] p-6">
+            <p className="text-sm uppercase tracking-[0.4em] text-[#64748B]">Education</p>
+            <h3 className="mt-3 font-display text-2xl font-black tracking-[-0.04em] text-[#F8FAFC]">
+              {education.degree}
+            </h3>
+            <p className="mt-2 text-sm font-semibold text-[#94A3B8]">{education.school}</p>
+            <p className="mt-3 text-sm leading-7 text-[#CBD5E1]">
+              Period: {education.period} | CGPA: {education.cgpa}
+            </p>
+          </motion.article>
         </motion.div>
       </div>
     </section>

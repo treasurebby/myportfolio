@@ -72,7 +72,7 @@ export default function HeroSection({ particleBackground }: HeroSectionProps) {
               Cloud and Web Engineer
             </p>
             <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
-              <div className="relative h-16 w-16 overflow-hidden rounded-2xl border border-slate-500/35 bg-slate-900/70 shadow-[0_16px_40px_rgba(148,163,184,0.18)] sm:h-20 sm:w-20">
+              <div className="relative h-24 w-24 overflow-hidden rounded-2xl border border-slate-500/35 bg-slate-900/70 shadow-[0_16px_40px_rgba(148,163,184,0.18)] sm:h-28 sm:w-28">
                 <Image
                   src="/portrait.jpg"
                   alt="Portrait of Ehiomhen Treasure"

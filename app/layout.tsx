@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Manrope, Syne } from "next/font/google";
+import { Exo_2, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
 
-const displayFont = Syne({
+const displayFont = Exo_2({
   variable: "--font-display",
   subsets: ["latin"],
 });
 
-const bodyFont = Manrope({
+const bodyFont = IBM_Plex_Sans({
   variable: "--font-body",
   subsets: ["latin"],
 });

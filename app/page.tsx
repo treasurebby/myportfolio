@@ -1,4 +1,3 @@
-import BlogSection from "@/components/blog-section";
 import ContactSection from "@/components/contact-section";
 import HeroSection from "@/components/hero-section";
 import ParticleBackground from "@/components/particle-background";
@@ -19,7 +18,6 @@ export default function Home() {
       <SkillsSection />
       <ProjectsSection />
       <TimelineSection />
-      <BlogSection />
       <ContactSection />
     </main>
   );

@@ -4,28 +4,58 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    name: "Aurora Control Plane",
+    name: "Customer Complaint System (AWS Serverless)",
+    period: "2023 - 2027",
     description:
-      "A cloud orchestration dashboard for provisioning services, managing release gates, and tracing runtime health.",
-    stack: ["Next.js", "AWS", "Terraform", "Go"],
+      "Built a serverless app using Lambda, DynamoDB, and API Gateway with CloudWatch logs, REST APIs, and basic IaC.",
+    stack: ["AWS Lambda", "DynamoDB", "API Gateway", "CloudWatch"],
     github: "https://github.com/treasurebby",
-    live: "https://example.com",
+    status: "Completed",
   },
   {
-    name: "Nebula Delivery Hub",
+    name: "Secure 2-Tier Web App (AWS VPC)",
+    period: "Project",
     description:
-      "A CI/CD coordination layer that turns release steps into auditable, reusable deployment journeys.",
-    stack: ["Node.js", "Docker", "Kubernetes", "GitHub Actions"],
+      "Configured VPC with public/private subnets, deployed EC2 and RDS, and implemented security groups, route tables, and NACLs.",
+    stack: ["AWS VPC", "EC2", "RDS", "Security Groups"],
     github: "https://github.com/treasurebby",
-    live: "https://example.com",
+    status: "Completed",
   },
   {
-    name: "Pulse Metrics API",
+    name: "Food Delivery App (React Native)",
+    period: "Project",
     description:
-      "A low-latency backend service for aggregating platform telemetry and surfacing actionable alerts.",
-    stack: ["Python", "PostgreSQL", "Azure", "OpenTelemetry"],
+      "Designed a functional mobile UI with categories, restaurant lists, and mock API integration.",
+    stack: ["React Native", "Mobile UI", "Mock APIs"],
     github: "https://github.com/treasurebby",
-    live: "https://example.com",
+    status: "Completed",
+  },
+  {
+    name: "Mood Detector (ML + CV)",
+    period: "Project",
+    description:
+      "Trained a model on Kaggle data to classify emotions from images and live camera input.",
+    stack: ["Python", "Machine Learning", "Computer Vision", "Kaggle"],
+    github: "https://github.com/treasurebby",
+    status: "Completed",
+  },
+  {
+    name: "Q&A App (Gemini API)",
+    period: "Project",
+    description:
+      "Integrated Gemini API to answer user questions in real time.",
+    stack: ["Gemini API", "Real-time Responses"],
+    github: "https://github.com/treasurebby",
+    status: "Completed",
+  },
+  {
+    name: "GetBetter - Self-Improvement Platform",
+    period: "In Progress",
+    description:
+      "Building a personal goal-tracking platform with time-based logging and self-improvement workflows.",
+    stack: ["Web App", "Goal Tracking", "Time Logging"],
+    github: "https://github.com/treasurebby",
+    status: "In Progress",
   },
 ];
 
@@ -50,14 +80,14 @@ export default function ProjectsSection() {
     <section id="projects" data-cinematic-section className="border-b border-white/5 px-6 py-24 sm:px-10 lg:px-12">
       <div className="mx-auto w-full max-w-7xl">
         <div className="mb-10 max-w-3xl">
-          <p className="text-sm uppercase tracking-[0.4em] text-[#64748B]">Selected projects</p>
+          <p className="text-sm uppercase tracking-[0.4em] text-[#64748B]">Projects</p>
           <h2 className="mt-4 font-display text-4xl font-black tracking-[-0.05em] text-[#F8FAFC] sm:text-5xl">
-            Engineering work with product polish and operational depth.
+            Real projects across cloud, web applications, and machine learning.
           </h2>
         </div>
 
         <motion.div
-          className="grid gap-6 lg:grid-cols-3"
+          className="grid gap-6 lg:grid-cols-2"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -75,7 +105,7 @@ export default function ProjectsSection() {
             >
               <div className="flex h-full flex-col gap-6">
                 <div>
-                  <p className="text-xs uppercase tracking-[0.35em] text-[#64748B]">Project</p>
+                  <p className="text-xs uppercase tracking-[0.35em] text-[#64748B]">{project.period}</p>
                   <h3 className="mt-3 font-display text-2xl font-black tracking-[-0.04em] text-[#F8FAFC]">
                     {project.name}
                   </h3>
@@ -104,15 +134,9 @@ export default function ProjectsSection() {
                   >
                     GitHub
                   </a>
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`Open the live demo for ${project.name}`}
-                    className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#E2E8F0] to-[#94A3B8] px-4 py-2 text-sm font-semibold text-[#0A0F1E] shadow-glow transition hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E2E8F0] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0F1E]"
-                  >
-                    Live demo
-                  </a>
+                  <span className="inline-flex items-center justify-center rounded-full border border-slate-500/35 bg-slate-900/70 px-4 py-2 text-sm font-semibold text-[#E2E8F0]">
+                    {project.status}
+                  </span>
                 </div>
               </div>
             </motion.article>
