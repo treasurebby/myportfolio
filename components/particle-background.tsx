@@ -26,13 +26,13 @@ export default function ParticleBackground() {
     renderer.setClearColor(0x000000, 0);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-    const ambientLight = new THREE.AmbientLight(0xffffff, 2.2);
-    const pointLight = new THREE.PointLight(0xec4899, 4.2, 80);
+    const ambientLight = new THREE.AmbientLight(0xf8fafc, 2.2);
+    const pointLight = new THREE.PointLight(0xe2e8f0, 4.2, 80);
     pointLight.position.set(6, 8, 10);
-    const purpleLight = new THREE.PointLight(0x7c3aed, 3.4, 80);
-    purpleLight.position.set(-8, -6, 12);
+    const slateLight = new THREE.PointLight(0x94a3b8, 3.4, 80);
+    slateLight.position.set(-8, -6, 12);
 
-    scene.add(ambientLight, pointLight, purpleLight);
+    scene.add(ambientLight, pointLight, slateLight);
 
     const particleCount = 3200;
     const particlePositions = new Float32Array(particleCount * 3);
@@ -78,9 +78,9 @@ export default function ParticleBackground() {
       return mesh;
     };
 
-    const orbOne = createOrb(new THREE.TorusKnotGeometry(1.05, 0.34, 120, 18), 0x7c3aed, -6, 2.2);
-    const orbTwo = createOrb(new THREE.OctahedronGeometry(0.95, 0), 0xec4899, 6, -1.8);
-    const orbThree = createOrb(new THREE.IcosahedronGeometry(0.75, 0), 0xffffff, 0.5, 3.8);
+    const orbOne = createOrb(new THREE.TorusKnotGeometry(1.05, 0.34, 120, 18), 0x1e293b, -6, 2.2);
+    const orbTwo = createOrb(new THREE.OctahedronGeometry(0.95, 0), 0x334155, 6, -1.8);
+    const orbThree = createOrb(new THREE.IcosahedronGeometry(0.75, 0), 0xe2e8f0, 0.5, 3.8);
 
     const mouse = new THREE.Vector2(0, 0);
 

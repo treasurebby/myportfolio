@@ -22,23 +22,23 @@ export default function ContactSection() {
     <section id="contact" data-cinematic-section className="px-6 py-24 sm:px-10 lg:px-12">
       <div className="mx-auto grid w-full max-w-7xl gap-10 lg:grid-cols-[1.1fr,0.9fr]">
         <div className="max-w-2xl">
-          <p className="text-sm uppercase tracking-[0.4em] text-white/[0.45]">Contact</p>
-          <h2 className="mt-4 font-display text-4xl font-black tracking-[-0.05em] text-white sm:text-5xl">
+          <p className="text-sm uppercase tracking-[0.4em] text-[#64748B]">Contact</p>
+          <h2 className="mt-4 font-display text-4xl font-black tracking-[-0.05em] text-[#F8FAFC] sm:text-5xl">
             Let&apos;s build the next platform, service, or delivery pipeline.
           </h2>
-          <p className="mt-6 text-base leading-8 text-white/[0.72] sm:text-lg">
+          <p className="mt-6 text-base leading-8 text-[#CBD5E1] sm:text-lg">
             Share the problem, the constraints, and the timeline. I&apos;ll respond with a practical plan
             and the shortest path to a reliable result.
           </p>
 
-          <div className="mt-8 flex flex-wrap gap-4 text-sm text-white/[0.70]">
-            <a className="transition hover:text-white" href="https://github.com/treasurebby" target="_blank" rel="noopener noreferrer">
+          <div className="mt-8 flex flex-wrap gap-4 text-sm text-[#94A3B8]">
+            <a className="transition hover:text-[#E2E8F0]" href="https://github.com/treasurebby" target="_blank" rel="noopener noreferrer">
               GitHub
             </a>
-            <a className="transition hover:text-white" href="https://www.linkedin.com/in/ehiomhen-treasure-889a4b298" target="_blank" rel="noopener noreferrer">
+            <a className="transition hover:text-[#E2E8F0]" href="https://www.linkedin.com/in/ehiomhen-treasure-889a4b298" target="_blank" rel="noopener noreferrer">
               LinkedIn
             </a>
-            <a className="transition hover:text-white" href="mailto:ehiomhentreasureruth@gmail.com">
+            <a className="transition hover:text-[#E2E8F0]" href="mailto:ehiomhentreasureruth@gmail.com">
               Email
             </a>
           </div>
@@ -56,7 +56,7 @@ export default function ContactSection() {
           className="glass-panel rounded-[1.75rem] p-6"
         >
           <div className="grid gap-4">
-            <label className="grid gap-2 text-sm text-white/[0.70]">
+            <label className="grid gap-2 text-sm text-[#CBD5E1]">
               Name
               <input
                 id="name"
@@ -65,10 +65,10 @@ export default function ContactSection() {
                 placeholder="Your name"
                 autoComplete="name"
                 required
-                className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none transition placeholder:text-white/[0.35] focus:border-white/20 focus:bg-white/[0.08]"
+                className="rounded-2xl border border-slate-500/30 bg-slate-900/70 px-4 py-3 text-[#F8FAFC] outline-none transition placeholder:text-slate-400 focus:border-slate-300/50 focus:bg-slate-900/90"
               />
             </label>
-            <label className="grid gap-2 text-sm text-white/[0.70]">
+            <label className="grid gap-2 text-sm text-[#CBD5E1]">
               Email
               <input
                 id="email"
@@ -77,10 +77,10 @@ export default function ContactSection() {
                 placeholder="you@example.com"
                 autoComplete="email"
                 required
-                className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none transition placeholder:text-white/[0.35] focus:border-white/20 focus:bg-white/[0.08]"
+                className="rounded-2xl border border-slate-500/30 bg-slate-900/70 px-4 py-3 text-[#F8FAFC] outline-none transition placeholder:text-slate-400 focus:border-slate-300/50 focus:bg-slate-900/90"
               />
             </label>
-            <label className="grid gap-2 text-sm text-white/[0.70]">
+            <label className="grid gap-2 text-sm text-[#CBD5E1]">
               Message
               <textarea
                 id="message"
@@ -90,7 +90,7 @@ export default function ContactSection() {
                 placeholder="Tell me what you&apos;re building..."
                 rows={5}
                 required
-                className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none transition placeholder:text-white/[0.35] focus:border-white/20 focus:bg-white/[0.08]"
+                className="rounded-2xl border border-slate-500/30 bg-slate-900/70 px-4 py-3 text-[#F8FAFC] outline-none transition placeholder:text-slate-400 focus:border-slate-300/50 focus:bg-slate-900/90"
               />
             </label>
           </div>
@@ -101,13 +101,13 @@ export default function ContactSection() {
             initial="rest"
             whileHover="hover"
             whileTap="tap"
-            className="mt-5 inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-hotPink to-electricPurple px-5 py-3 text-sm font-semibold text-white shadow-glow transition hover:brightness-110"
+            className="mt-5 inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-[#E2E8F0] to-[#94A3B8] px-5 py-3 text-sm font-semibold text-[#0A0F1E] shadow-glow transition hover:brightness-110"
           >
             Send message
           </motion.button>
 
           {hasSubmitted ? (
-            <p className="mt-4 text-sm text-white/[0.68]">
+            <p className="mt-4 text-sm text-[#94A3B8]">
               Thanks for reaching out. For a faster response, email me directly at ehiomhentreasureruth@gmail.com.
             </p>
           ) : null}

@@ -45,8 +45,8 @@ export default function BlogSection() {
     <section id="blog" data-cinematic-section className="border-b border-white/5 px-6 py-24 sm:px-10 lg:px-12">
       <div className="mx-auto w-full max-w-7xl">
         <div className="mb-10 max-w-3xl">
-          <p className="text-sm uppercase tracking-[0.4em] text-white/[0.45]">Blog / Articles</p>
-          <h2 className="mt-4 font-display text-4xl font-black tracking-[-0.05em] text-white sm:text-5xl">
+          <p className="text-sm uppercase tracking-[0.4em] text-[#64748B]">Blog / Articles</p>
+          <h2 className="mt-4 font-display text-4xl font-black tracking-[-0.05em] text-[#F8FAFC] sm:text-5xl">
             Notes on engineering, delivery, and the craft of systems work.
           </h2>
         </div>
@@ -63,16 +63,16 @@ export default function BlogSection() {
               key={post.title}
               variants={cardVariants}
               whileHover="hover"
-              className="glass-panel rounded-[1.5rem] p-6 transition-colors hover:border-white/20"
+              className="glass-panel rounded-[1.5rem] p-6 transition-colors hover:border-slate-400/30"
             >
-              <p className="text-xs uppercase tracking-[0.35em] text-white/[0.40]">{post.date}</p>
-              <h3 className="mt-4 font-display text-2xl font-black tracking-[-0.04em] text-white">
+              <p className="text-xs uppercase tracking-[0.35em] text-[#64748B]">{post.date}</p>
+              <h3 className="mt-4 font-display text-2xl font-black tracking-[-0.04em] text-[#F8FAFC]">
                 {post.title}
               </h3>
-              <p className="mt-4 text-sm text-white/[0.55]">{post.readTime}</p>
+              <p className="mt-4 text-sm text-[#94A3B8]">{post.readTime}</p>
               <a
                 href={post.href}
-                className="mt-5 inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white/[0.9] transition hover:border-white/20 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-hotPink focus-visible:ring-offset-2 focus-visible:ring-offset-[#050816]"
+                className="mt-5 inline-flex w-fit items-center gap-2 rounded-full border border-slate-500/35 bg-white/[0.03] px-4 py-2 text-sm font-semibold text-[#E2E8F0] transition hover:border-slate-300/50 hover:bg-white/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E2E8F0] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0F1E]"
                 aria-label={`Read article: ${post.title}`}
               >
                 Read article

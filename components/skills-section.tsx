@@ -53,8 +53,8 @@ export default function SkillsSection() {
     <section id="skills" data-cinematic-section className="border-b border-white/5 px-6 py-24 sm:px-10 lg:px-12">
       <div className="mx-auto w-full max-w-7xl">
         <div className="mb-10 max-w-3xl">
-          <p className="text-sm uppercase tracking-[0.4em] text-white/[0.45]">Skills & Tech Stack</p>
-          <h2 className="mt-4 font-display text-4xl font-black tracking-[-0.05em] text-white sm:text-5xl">
+          <p className="text-sm uppercase tracking-[0.4em] text-[#64748B]">Skills & Tech Stack</p>
+          <h2 className="mt-4 font-display text-4xl font-black tracking-[-0.05em] text-[#F8FAFC] sm:text-5xl">
             Practical tools for building and operating serious software.
           </h2>
         </div>
@@ -77,12 +77,12 @@ export default function SkillsSection() {
                 className="glass-panel group rounded-[1.5rem] p-5"
               >
                 <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-white/[0.16] to-white/[0.04] text-white shadow-glow transition-transform duration-300 group-hover:scale-105">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-slate-500/30 bg-slate-900/70 text-[#E2E8F0] shadow-glow transition-transform duration-300 group-hover:scale-105">
                     <Icon className="h-5 w-5" />
                   </div>
                   <div>
-                    <p className="font-medium text-white">{skill.label}</p>
-                    <p className="mt-1 text-sm text-white/[0.48]">Production-grade workflows</p>
+                    <p className="font-medium text-[#F8FAFC]">{skill.label}</p>
+                    <p className="mt-1 text-sm text-[#94A3B8]">Production-grade workflows</p>
                   </div>
                 </div>
               </motion.div>

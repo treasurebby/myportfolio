@@ -50,8 +50,8 @@ export default function ProjectsSection() {
     <section id="projects" data-cinematic-section className="border-b border-white/5 px-6 py-24 sm:px-10 lg:px-12">
       <div className="mx-auto w-full max-w-7xl">
         <div className="mb-10 max-w-3xl">
-          <p className="text-sm uppercase tracking-[0.4em] text-white/[0.45]">Selected projects</p>
-          <h2 className="mt-4 font-display text-4xl font-black tracking-[-0.05em] text-white sm:text-5xl">
+          <p className="text-sm uppercase tracking-[0.4em] text-[#64748B]">Selected projects</p>
+          <h2 className="mt-4 font-display text-4xl font-black tracking-[-0.05em] text-[#F8FAFC] sm:text-5xl">
             Engineering work with product polish and operational depth.
           </h2>
         </div>
@@ -75,19 +75,19 @@ export default function ProjectsSection() {
             >
               <div className="flex h-full flex-col gap-6">
                 <div>
-                  <p className="text-xs uppercase tracking-[0.35em] text-white/[0.40]">Project</p>
-                  <h3 className="mt-3 font-display text-2xl font-black tracking-[-0.04em] text-white">
+                  <p className="text-xs uppercase tracking-[0.35em] text-[#64748B]">Project</p>
+                  <h3 className="mt-3 font-display text-2xl font-black tracking-[-0.04em] text-[#F8FAFC]">
                     {project.name}
                   </h3>
                 </div>
 
-                <p className="text-sm leading-7 text-white/[0.68]">{project.description}</p>
+                <p className="text-sm leading-7 text-[#CBD5E1]">{project.description}</p>
 
                 <div className="flex flex-wrap gap-2">
                   {project.stack.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs uppercase tracking-[0.25em] text-white/[0.60]"
+                      className="rounded-full border border-slate-500/35 bg-slate-900/70 px-3 py-1 text-xs uppercase tracking-[0.25em] text-[#E2E8F0]"
                     >
                       {tag}
                     </span>
@@ -100,7 +100,7 @@ export default function ProjectsSection() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`View ${project.name} on GitHub`}
-                    className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white/[0.85] transition hover:border-white/20 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-hotPink focus-visible:ring-offset-2 focus-visible:ring-offset-[#050816]"
+                    className="inline-flex items-center justify-center rounded-full border border-slate-500/35 bg-white/[0.03] px-4 py-2 text-sm font-semibold text-[#E2E8F0] transition hover:border-slate-300/50 hover:bg-white/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E2E8F0] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0F1E]"
                   >
                     GitHub
                   </a>
@@ -109,7 +109,7 @@ export default function ProjectsSection() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`Open the live demo for ${project.name}`}
-                    className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-hotPink to-electricPurple px-4 py-2 text-sm font-semibold text-white shadow-glow transition hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-hotPink focus-visible:ring-offset-2 focus-visible:ring-offset-[#050816]"
+                    className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#E2E8F0] to-[#94A3B8] px-4 py-2 text-sm font-semibold text-[#0A0F1E] shadow-glow transition hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E2E8F0] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0F1E]"
                   >
                     Live demo
                   </a>

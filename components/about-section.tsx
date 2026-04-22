@@ -40,7 +40,7 @@ export default function AboutSection() {
       >
         <motion.div variants={itemVariants} className="flex flex-col justify-center gap-8">
           <div>
-            <p className="text-sm uppercase tracking-[0.4em] text-white/[0.45]">About me</p>
+            <p className="text-sm uppercase tracking-[0.4em] text-[#64748B]">About me</p>
             <h2 className="mt-4 font-display text-4xl font-black tracking-[-0.05em] text-white sm:text-5xl">
               Building systems that stay calm when traffic does not.
             </h2>
