@@ -19,17 +19,33 @@ export default function ContactSection() {
   const [hasSubmitted, setHasSubmitted] = useState(false);
 
   return (
-    <section id="contact" data-cinematic-section className="px-6 py-24 sm:px-10 lg:px-12">
-      <div className="mx-auto grid w-full max-w-7xl gap-10 lg:grid-cols-[1.1fr,0.9fr]">
+    <section id="contact" data-cinematic-section className="px-6 py-16 sm:px-10 lg:px-12">
+      <div className="mx-auto grid w-full max-w-6xl gap-8 lg:grid-cols-[1.1fr,0.9fr]">
         <div className="max-w-2xl">
           <p className="text-sm uppercase tracking-[0.4em] text-[#64748B]">Contact</p>
-          <h2 className="mt-4 font-display text-4xl font-black tracking-[-0.05em] text-[#F8FAFC] sm:text-5xl">
-            Let&apos;s build the next platform, service, or delivery pipeline.
+          <h2 className="mt-4 font-display text-3xl font-black tracking-[-0.05em] text-[#F8FAFC] sm:text-4xl">
+            Open to internships and junior cloud-backend roles.
           </h2>
-          <p className="mt-6 text-base leading-8 text-[#CBD5E1] sm:text-lg">
+          <p className="mt-5 text-base leading-7 text-[#CBD5E1]">
             Share the problem, the constraints, and the timeline. I&apos;ll respond with a practical plan
             and the shortest path to a reliable result.
           </p>
+
+          <div className="mt-5 flex flex-wrap gap-3">
+            <span className="rounded-full border border-slate-500/35 bg-slate-900/70 px-4 py-2 text-xs uppercase tracking-[0.25em] text-[#E2E8F0]">
+              Available for internships
+            </span>
+            <span className="rounded-full border border-slate-500/35 bg-slate-900/70 px-4 py-2 text-xs uppercase tracking-[0.25em] text-[#E2E8F0]">
+              Replies within 24 hours
+            </span>
+          </div>
+
+          <a
+            className="mt-6 inline-flex items-center justify-center rounded-full border border-slate-500/35 bg-white/[0.03] px-5 py-3 text-sm font-semibold text-[#E2E8F0] transition hover:border-slate-300/50 hover:bg-white/[0.06]"
+            href="mailto:ehiomhentreasureruth@gmail.com"
+          >
+            Email me directly
+          </a>
 
           <div className="mt-8 flex flex-wrap gap-4 text-sm text-[#94A3B8]">
             <a className="transition hover:text-[#E2E8F0]" href="https://github.com/treasurebby" target="_blank" rel="noopener noreferrer">
@@ -53,8 +69,12 @@ export default function ContactSection() {
             event.preventDefault();
             setHasSubmitted(true);
           }}
-          className="glass-panel rounded-[1.75rem] p-6"
+          className="glass-panel rounded-[1.5rem] p-5"
         >
+          <p className="mb-4 text-sm text-[#94A3B8]">
+            Prefer a form? Share your project details below.
+          </p>
+
           <div className="grid gap-4">
             <label className="grid gap-2 text-sm text-[#CBD5E1]">
               Name
@@ -103,7 +123,7 @@ export default function ContactSection() {
             whileTap="tap"
             className="mt-5 inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-[#E2E8F0] to-[#94A3B8] px-5 py-3 text-sm font-semibold text-[#0A0F1E] shadow-glow transition hover:brightness-110"
           >
-            Send message
+            Send project details
           </motion.button>
 
           {hasSubmitted ? (

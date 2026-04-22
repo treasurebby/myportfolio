@@ -5,9 +5,11 @@ import { motion } from "framer-motion";
 const projects = [
   {
     name: "Customer Complaint System (AWS Serverless)",
-    period: "2023 - 2027",
-    description:
-      "Built a serverless app using Lambda, DynamoDB, and API Gateway with CloudWatch logs, REST APIs, and basic IaC.",
+    period: "Production build",
+    problem: "Needed a scalable complaint intake flow without managing servers.",
+    built:
+      "Implemented a serverless backend with Lambda, DynamoDB, API Gateway, and CloudWatch-backed observability.",
+    outcome: "Reduced operational overhead and created a cleaner path to scale traffic.",
     stack: ["AWS Lambda", "DynamoDB", "API Gateway", "CloudWatch"],
     github: "https://github.com/treasurebby",
     status: "Completed",
@@ -15,8 +17,10 @@ const projects = [
   {
     name: "Secure 2-Tier Web App (AWS VPC)",
     period: "Project",
-    description:
-      "Configured VPC with public/private subnets, deployed EC2 and RDS, and implemented security groups, route tables, and NACLs.",
+    problem: "Needed a secure architecture separating public and private workloads.",
+    built:
+      "Configured public/private subnets, EC2 and RDS placement, plus strict security groups, route tables, and NACLs.",
+    outcome: "Improved network isolation and reduced exposed attack surface.",
     stack: ["AWS VPC", "EC2", "RDS", "Security Groups"],
     github: "https://github.com/treasurebby",
     status: "Completed",
@@ -24,8 +28,10 @@ const projects = [
   {
     name: "Food Delivery App (React Native)",
     period: "Project",
-    description:
-      "Designed a functional mobile UI with categories, restaurant lists, and mock API integration.",
+    problem: "Needed a smooth mobile flow for browse-to-order interaction.",
+    built:
+      "Designed category and listing interfaces with reusable components and mock API-driven rendering.",
+    outcome: "Faster UI iteration and a cleaner base for integrating real backend APIs.",
     stack: ["React Native", "Mobile UI", "Mock APIs"],
     github: "https://github.com/treasurebby",
     status: "Completed",
@@ -33,8 +39,10 @@ const projects = [
   {
     name: "Mood Detector (ML + CV)",
     period: "Project",
-    description:
-      "Trained a model on Kaggle data to classify emotions from images and live camera input.",
+    problem: "Needed image and webcam emotion classification for real-time feedback.",
+    built:
+      "Trained and evaluated a computer-vision model with Kaggle data for static and live camera inference.",
+    outcome: "Delivered a working end-to-end ML pipeline from training to live prediction.",
     stack: ["Python", "Machine Learning", "Computer Vision", "Kaggle"],
     github: "https://github.com/treasurebby",
     status: "Completed",
@@ -42,8 +50,9 @@ const projects = [
   {
     name: "Q&A App (Gemini API)",
     period: "Project",
-    description:
-      "Integrated Gemini API to answer user questions in real time.",
+    problem: "Needed instant, context-aware responses in a simple interface.",
+    built: "Integrated Gemini API request/response flows with real-time user interactions.",
+    outcome: "Improved response speed and reduced friction in question-answer workflows.",
     stack: ["Gemini API", "Real-time Responses"],
     github: "https://github.com/treasurebby",
     status: "Completed",
@@ -51,8 +60,10 @@ const projects = [
   {
     name: "GetBetter - Self-Improvement Platform",
     period: "In Progress",
-    description:
-      "Building a personal goal-tracking platform with time-based logging and self-improvement workflows.",
+    problem: "Needed a structured way to track goals and daily execution.",
+    built:
+      "Designing goal tracking, timed logging, and behavior loops for continuous self-improvement.",
+    outcome: "Building toward clearer progress visibility and stronger accountability loops.",
     stack: ["Web App", "Goal Tracking", "Time Logging"],
     github: "https://github.com/treasurebby",
     status: "In Progress",
@@ -76,15 +87,35 @@ const cardVariants = {
 };
 
 export default function ProjectsSection() {
+  const featuredProject = projects[0];
+
   return (
     <section id="projects" data-cinematic-section className="border-b border-white/5 px-6 py-24 sm:px-10 lg:px-12">
       <div className="mx-auto w-full max-w-7xl">
         <div className="mb-10 max-w-3xl">
           <p className="text-sm uppercase tracking-[0.4em] text-[#64748B]">Projects</p>
           <h2 className="mt-4 font-display text-4xl font-black tracking-[-0.05em] text-[#F8FAFC] sm:text-5xl">
-            Real projects across cloud, web applications, and machine learning.
+            Built to solve real delivery, reliability, and scale problems.
           </h2>
         </div>
+
+        <article className="glass-panel mb-8 rounded-[1.75rem] p-6 sm:p-8">
+          <p className="text-xs uppercase tracking-[0.35em] text-[#64748B]">Featured Case Study</p>
+          <h3 className="mt-3 font-display text-3xl font-black tracking-[-0.04em] text-[#F8FAFC] sm:text-4xl">
+            {featuredProject.name}
+          </h3>
+          <div className="mt-6 grid gap-4 text-sm leading-7 text-[#CBD5E1] sm:grid-cols-3">
+            <p>
+              <span className="font-semibold text-[#E2E8F0]">Problem:</span> {featuredProject.problem}
+            </p>
+            <p>
+              <span className="font-semibold text-[#E2E8F0]">Built:</span> {featuredProject.built}
+            </p>
+            <p>
+              <span className="font-semibold text-[#E2E8F0]">Outcome:</span> {featuredProject.outcome}
+            </p>
+          </div>
+        </article>
 
         <motion.div
           className="grid gap-6 lg:grid-cols-2"
@@ -111,7 +142,17 @@ export default function ProjectsSection() {
                   </h3>
                 </div>
 
-                <p className="text-sm leading-7 text-[#CBD5E1]">{project.description}</p>
+                <div className="grid gap-2 text-sm leading-7 text-[#CBD5E1]">
+                  <p>
+                    <span className="font-semibold text-[#E2E8F0]">Problem:</span> {project.problem}
+                  </p>
+                  <p>
+                    <span className="font-semibold text-[#E2E8F0]">Built:</span> {project.built}
+                  </p>
+                  <p>
+                    <span className="font-semibold text-[#E2E8F0]">Outcome:</span> {project.outcome}
+                  </p>
+                </div>
 
                 <div className="flex flex-wrap gap-2">
                   {project.stack.map((tag) => (

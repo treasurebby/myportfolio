@@ -64,15 +64,15 @@ export default function HeroSection({ particleBackground }: HeroSectionProps) {
             className="inline-flex w-fit items-center gap-2 rounded-full border border-slate-500/30 bg-white/[0.03] px-4 py-2 text-sm text-[#E2E8F0] backdrop-blur-md"
           >
             <span className="h-2 w-2 rounded-full bg-[#E2E8F0] shadow-[0_0_24px_rgba(148,163,184,0.4)]" />
-            Cloud and web systems. DevOps precision. Backend scale.
+            Cloud-native web apps. Reliable CI/CD. Production-ready infrastructure.
           </motion.div>
 
           <motion.div variants={itemVariants} className="max-w-5xl">
             <p className="mb-4 text-sm uppercase tracking-[0.45em] text-[#64748B]">
-              Cloud and Web Engineer
+              Cloud, Backend, and DevOps Engineer
             </p>
             <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
-              <div className="relative h-24 w-24 overflow-hidden rounded-2xl border border-slate-500/35 bg-slate-900/70 shadow-[0_16px_40px_rgba(148,163,184,0.18)] sm:h-28 sm:w-28">
+              <div className="relative h-40 w-40 overflow-hidden rounded-2xl border border-slate-500/35 bg-slate-900/70 shadow-[0_16px_40px_rgba(148,163,184,0.18)] sm:h-56 sm:w-56">
                 <Image
                   src="/portrait.jpg"
                   alt="Portrait of Ehiomhen Treasure"
@@ -89,8 +89,11 @@ export default function HeroSection({ particleBackground }: HeroSectionProps) {
               </h1>
             </div>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-[#CBD5E1] sm:text-xl">
-              I design and ship resilient cloud infrastructure and web platforms with smooth user
-              experiences, strong reliability, and room to scale.
+              I build cloud-native web applications with resilient backend systems, practical DevOps
+              workflows, and infrastructure that holds up in production.
+            </p>
+            <p className="mt-3 text-sm font-semibold uppercase tracking-[0.25em] text-[#94A3B8]">
+              10+ shipped projects | AWS-focused | Next.js and FastAPI systems
             </p>
           </motion.div>
 
@@ -131,7 +134,7 @@ export default function HeroSection({ particleBackground }: HeroSectionProps) {
               { label: "GitHub", href: "https://github.com/treasurebby" },
               { label: "LinkedIn", href: "https://www.linkedin.com/in/ehiomhen-treasure-889a4b298" },
               { label: "Email", href: "mailto:ehiomhentreasureruth@gmail.com" },
-              { label: "Download CV", href: "/ehiomhen-treasure-cv.pdf.pdf", download: true },
+              { label: "Download CV", href: "/ehiomhen-treasure-cv.pdf", download: true },
             ].map((button) => (
               <motion.a
                 key={button.label}
