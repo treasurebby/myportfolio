@@ -32,28 +32,12 @@ export default function AboutSection() {
   return (
     <section id="about" data-cinematic-section className="border-b border-white/5 px-6 py-24 sm:px-10 lg:px-12">
       <motion.div
-        className="mx-auto grid w-full max-w-7xl gap-8 lg:grid-cols-[0.9fr,1.1fr]"
+        className="mx-auto w-full max-w-5xl"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
       >
-        <motion.div variants={itemVariants} className="glass-panel overflow-hidden rounded-[2rem] p-5">
-          <div className="flex min-h-[26rem] flex-col justify-between rounded-[1.5rem] border border-white/10 bg-[linear-gradient(180deg,rgba(124,58,237,0.18),rgba(236,72,153,0.08)_60%,rgba(255,255,255,0.03))] p-6">
-            <div>
-              <p className="text-sm uppercase tracking-[0.35em] text-white/[0.45]">Photo placeholder</p>
-              <div className="mt-8 flex h-56 items-center justify-center rounded-[1.5rem] border border-dashed border-white/15 bg-black/20 text-center text-sm text-white/50">
-                Replace this frame with a portrait or a studio-style headshot.
-              </div>
-            </div>
-            <div className="mt-8 flex flex-wrap gap-3 text-xs uppercase tracking-[0.3em] text-white/[0.55]">
-              <span className="rounded-full border border-white/10 bg-white/5 px-3 py-2">Cloud</span>
-              <span className="rounded-full border border-white/10 bg-white/5 px-3 py-2">DevOps</span>
-              <span className="rounded-full border border-white/10 bg-white/5 px-3 py-2">Backend</span>
-            </div>
-          </div>
-        </motion.div>
-
         <motion.div variants={itemVariants} className="flex flex-col justify-center gap-8">
           <div>
             <p className="text-sm uppercase tracking-[0.4em] text-white/[0.45]">About me</p>
@@ -67,6 +51,12 @@ export default function AboutSection() {
             reliable, and ready for growth. My work lives where application logic meets platform
             engineering, with a bias toward clarity, automation, and repeatability.
           </p>
+
+          <div className="flex flex-wrap gap-3 text-xs uppercase tracking-[0.3em] text-white/[0.55]">
+            <span className="rounded-full border border-white/10 bg-white/5 px-3 py-2">Cloud</span>
+            <span className="rounded-full border border-white/10 bg-white/5 px-3 py-2">DevOps</span>
+            <span className="rounded-full border border-white/10 bg-white/5 px-3 py-2">Backend</span>
+          </div>
 
           <div className="grid gap-4 sm:grid-cols-3">
             {stats.map((stat) => (
