@@ -46,6 +46,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${displayFont.variable} ${bodyFont.variable} h-full antialiased`}>
       <body className="min-h-full bg-background text-foreground font-body">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:text-black"
+        >
+          Skip to content
+        </a>
         {children}
       </body>
     </html>

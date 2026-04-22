@@ -10,7 +10,7 @@ import TimelineSection from "@/components/timeline-section";
 
 export default function Home() {
   return (
-    <main className="relative isolate overflow-hidden">
+    <main id="main-content" className="relative isolate overflow-hidden">
       <ScrollEffects />
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute left-1/2 top-0 h-[40rem] w-[40rem] -translate-x-1/2 rounded-full bg-fuchsia-500/10 blur-3xl" />
