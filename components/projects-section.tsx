@@ -8,7 +8,7 @@ const projects = [
     description:
       "A cloud orchestration dashboard for provisioning services, managing release gates, and tracing runtime health.",
     stack: ["Next.js", "AWS", "Terraform", "Go"],
-    github: "https://github.com/your-handle",
+    github: "https://github.com/treasurebby",
     live: "https://example.com",
   },
   {
@@ -16,7 +16,7 @@ const projects = [
     description:
       "A CI/CD coordination layer that turns release steps into auditable, reusable deployment journeys.",
     stack: ["Node.js", "Docker", "Kubernetes", "GitHub Actions"],
-    github: "https://github.com/your-handle",
+    github: "https://github.com/treasurebby",
     live: "https://example.com",
   },
   {
@@ -24,7 +24,7 @@ const projects = [
     description:
       "A low-latency backend service for aggregating platform telemetry and surfacing actionable alerts.",
     stack: ["Python", "PostgreSQL", "Azure", "OpenTelemetry"],
-    github: "https://github.com/your-handle",
+    github: "https://github.com/treasurebby",
     live: "https://example.com",
   },
 ];
