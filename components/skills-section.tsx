@@ -53,7 +53,7 @@ export default function SkillsSection() {
     <section id="skills" data-cinematic-section className="border-b border-white/5 px-6 py-24 sm:px-10 lg:px-12">
       <div className="mx-auto w-full max-w-7xl">
         <div className="mb-10 max-w-3xl">
-          <p className="text-sm uppercase tracking-[0.4em] text-white/45">Skills & Tech Stack</p>
+          <p className="text-sm uppercase tracking-[0.4em] text-white/[0.45]">Skills & Tech Stack</p>
           <h2 className="mt-4 font-display text-4xl font-black tracking-[-0.05em] text-white sm:text-5xl">
             Practical tools for building and operating serious software.
           </h2>
