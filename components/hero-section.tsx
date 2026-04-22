@@ -73,13 +73,42 @@ export default function HeroSection({ particleBackground }: HeroSectionProps) {
             <p className="mb-4 text-sm uppercase tracking-[0.45em] text-white/[0.45]">
               Cloud and Web Engineer
             </p>
-            <h1 className="font-display text-6xl font-black leading-[0.9] tracking-[-0.06em] text-white sm:text-7xl lg:text-[7.3rem]">
+            <h1 className="max-w-4xl font-display text-5xl font-black leading-[0.92] tracking-[-0.06em] text-white sm:text-6xl lg:text-[5.9rem]">
               <span className="gradient-text bg-clip-text text-transparent">Ehiomhen Treasure</span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-white/[0.72] sm:text-xl">
               I design and ship resilient cloud infrastructure and web platforms with smooth user
               experiences, strong reliability, and room to scale.
             </p>
+          </motion.div>
+
+          <motion.div variants={itemVariants} className="grid gap-8 rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur-sm sm:p-8">
+            <div className="max-w-3xl">
+              <p className="text-sm uppercase tracking-[0.4em] text-white/[0.45]">About me</p>
+              <h2 className="mt-4 font-display text-3xl font-black tracking-[-0.05em] text-white sm:text-4xl">
+                Building systems that stay calm when traffic does not.
+              </h2>
+              <p className="mt-5 max-w-2xl text-base leading-8 text-white/[0.72] sm:text-lg">
+                I help teams design web applications and delivery pipelines that are measurable,
+                reliable, and ready for growth. My work lives where application logic meets platform
+                engineering, with a bias toward clarity, automation, and repeatability.
+              </p>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-3">
+              {[
+                { value: "1+", label: "Years coding" },
+                { value: "10+", label: "Projects built" },
+                { value: "100+", label: "Coffees" },
+              ].map((stat) => (
+                <div key={stat.label} className="glass-panel rounded-2xl p-5">
+                  <p className="font-display text-3xl font-black tracking-[-0.05em] text-white">
+                    {stat.value}
+                  </p>
+                  <p className="mt-2 text-sm text-white/[0.55]">{stat.label}</p>
+                </div>
+              ))}
+            </div>
           </motion.div>
 
           <motion.div
@@ -110,9 +139,9 @@ export default function HeroSection({ particleBackground }: HeroSectionProps) {
           </motion.div>
 
           <motion.div variants={itemVariants} className="mt-6 flex items-center gap-4 text-white/[0.55]">
-            <a href="#about" className="group inline-flex items-center gap-3 text-sm uppercase tracking-[0.3em]">
+            <a href="#skills" className="group inline-flex items-center gap-3 text-sm uppercase tracking-[0.3em]">
               <span className="h-px w-12 bg-gradient-to-r from-hotPink to-electricPurple transition-all duration-300 group-hover:w-16" />
-              Scroll
+              Continue
             </a>
             <motion.div
               aria-hidden="true"

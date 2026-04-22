@@ -1,4 +1,3 @@
-import AboutSection from "@/components/about-section";
 import BlogSection from "@/components/blog-section";
 import ContactSection from "@/components/contact-section";
 import HeroSection from "@/components/hero-section";
@@ -17,7 +16,6 @@ export default function Home() {
         <div className="absolute right-[-8rem] top-[28rem] h-[28rem] w-[28rem] rounded-full bg-violet-500/10 blur-3xl" />
       </div>
       <HeroSection particleBackground={<ParticleBackground />} />
-      <AboutSection />
       <SkillsSection />
       <ProjectsSection />
       <TimelineSection />
