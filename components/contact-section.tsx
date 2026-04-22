@@ -31,14 +31,14 @@ export default function ContactSection() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4 text-sm text-white/[0.70]">
-            <a className="transition hover:text-white" href="https://github.com/your-handle" target="_blank" rel="noreferrer">
+            <a className="transition hover:text-white" href="https://github.com/treasurebby" target="_blank" rel="noopener noreferrer">
               GitHub
             </a>
-            <a className="transition hover:text-white" href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noreferrer">
+            <a className="transition hover:text-white" href="https://www.linkedin.com/in/ehiomhen-treasure-889a4b298" target="_blank" rel="noopener noreferrer">
               LinkedIn
             </a>
-            <a className="transition hover:text-white" href="https://x.com/your-handle" target="_blank" rel="noreferrer">
-              Twitter
+            <a className="transition hover:text-white" href="mailto:ehiomhentreasureruth@gmail.com">
+              Email
             </a>
           </div>
         </div>
