@@ -16,9 +16,9 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://myportfolio.vercel.
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Ehiomhen Treasure | Cloud, DevOps & Backend Engineer",
+  title: "Ehiomhen Treasure | Aspiring Software Engineer",
   description:
-    "Cinematic portfolio for Ehiomhen Treasure, a cloud, backend, and DevOps engineer focused on production-ready systems, resilient infrastructure, and scalable web applications.",
+    "Portfolio for Ehiomhen Treasure, an aspiring software engineer with experience in cloud, DevOps, backend, and mobile development. Focused on building practical, production-ready systems.",
   keywords: [
     "Ehiomhen Treasure",
     "Cloud Engineer",

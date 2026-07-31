@@ -4,6 +4,26 @@ import { motion } from "framer-motion";
 
 const timeline = [
   {
+    period: "May 2026 - Present",
+    title: "Platform Engineering Intern",
+    organization: "Interswitch Group",
+    highlights: [
+      "Contributed to infrastructure optimization and CI/CD pipeline automation to enhance deployment efficiency.",
+      "Collaborated with engineering teams to monitor system performance and troubleshoot cloud-native infrastructure issues.",
+      "Assisted in migrating legacy services to containerized environments, ensuring scalability and high availability.",
+    ],
+  },
+  {
+    period: "March 2026 - April 2026",
+    title: "IT Intern",
+    organization: "Addossa Microfinance",
+    highlights: [
+      "Managed internal IT systems and provided technical support to ensure seamless branch operations.",
+      "Automated routine data entry tasks using Python scripts, significantly improving record-keeping accuracy.",
+      "Maintained hardware/software inventory and supported the digital transformation of manual financial tracking processes.",
+    ],
+  },
+  {
     period: "August 2025 - September 2025",
     title: "Cloud and DevOps Intern",
     organization: "Covenda AI",
@@ -47,12 +67,12 @@ const itemVariants = {
 
 export default function TimelineSection() {
   return (
-    <section id="experience" data-cinematic-section className="border-b border-white/5 px-6 py-24 sm:px-10 lg:px-12">
+    <section id="experience" data-cinematic-section className="border-b border-white/5 px-6 py-16 sm:px-10 lg:px-12">
       <div className="mx-auto w-full max-w-7xl">
         <div className="mb-10 max-w-3xl">
           <p className="text-sm uppercase tracking-[0.4em] text-[#64748B]">Professional Experience</p>
-          <h2 className="mt-4 font-display text-4xl font-black tracking-[-0.05em] text-[#F8FAFC] sm:text-5xl">
-            Hands-on cloud, DevOps, and cybersecurity experience.
+          <h2 className="mt-3 font-display text-3xl font-black tracking-[-0.05em] text-[#F8FAFC] sm:text-4xl">
+            Hands-on software, cloud, and infrastructure experience.
           </h2>
         </div>
 

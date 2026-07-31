@@ -53,12 +53,12 @@ export default function HeroSection({ particleBackground }: HeroSectionProps) {
             className="inline-flex w-fit items-center gap-2 rounded-full border border-slate-500/30 bg-white/[0.03] px-4 py-2 text-sm text-[#E2E8F0] backdrop-blur-md"
           >
             <span className="h-2 w-2 rounded-full bg-[#E2E8F0] shadow-[0_0_24px_rgba(148,163,184,0.4)]" />
-            Cloud-native web apps. Reliable CI/CD. Production-ready infrastructure.
+            Software engineering. Cloud fundamentals. Practical DevOps delivery.
           </motion.div>
 
           <motion.div variants={itemVariants} className="max-w-5xl">
             <p className="mb-4 text-sm uppercase tracking-[0.45em] text-[#64748B]">
-              Cloud, Backend, and DevOps Engineer
+              Aspiring Software Engineer
             </p>
             <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
               <div className="relative h-40 w-40 overflow-hidden rounded-2xl border border-slate-500/35 bg-slate-900/70 shadow-[0_16px_40px_rgba(148,163,184,0.18)] sm:h-56 sm:w-56">
@@ -78,11 +78,11 @@ export default function HeroSection({ particleBackground }: HeroSectionProps) {
               </h1>
             </div>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-[#CBD5E1] sm:text-xl">
-              I build cloud-native web applications with resilient backend systems, practical DevOps
-              workflows, and infrastructure that holds up in production.
+              I build and deploy practical software across web, mobile, and cloud platforms. I care
+              about clean code, observable systems, and delivery workflows that make teams faster.
             </p>
             <p className="mt-3 text-sm font-semibold uppercase tracking-[0.25em] text-[#94A3B8]">
-              10+ shipped projects | AWS-focused | Next.js and FastAPI systems
+              AWS • Python • React Native • Docker • CI/CD • System Design
             </p>
           </motion.div>
 
@@ -90,20 +90,21 @@ export default function HeroSection({ particleBackground }: HeroSectionProps) {
             <div className="max-w-3xl">
               <p className="text-sm uppercase tracking-[0.4em] text-[#64748B]">About me</p>
               <h2 className="mt-4 font-display text-3xl font-black tracking-[-0.05em] text-[#F8FAFC] sm:text-4xl">
-                Building systems that stay calm when traffic does not.
+                Engineering for impact, from idea to deployment.
               </h2>
               <p className="mt-5 max-w-2xl text-base leading-8 text-[#CBD5E1] sm:text-lg">
-                I help teams design web applications and delivery pipelines that are measurable,
-                reliable, and ready for growth. My work lives where application logic meets platform
-                engineering, with a bias toward clarity, automation, and repeatability.
+                Motivated software engineer with hands-on experience in development, deployment, and
+                cloud fundamentals. I enjoy debugging hard problems, designing systems that scale,
+                and writing automation that removes repetitive work. Currently building a portfolio
+                focused on impactful, production-ready software.
               </p>
             </div>
 
             <div className="grid gap-4 sm:grid-cols-3">
               {[
-                { value: "1+", label: "Years coding" },
                 { value: "10+", label: "Projects built" },
-                { value: "100+", label: "Coffees" },
+                { value: "3+", label: "Internships" },
+                { value: "4.90", label: "CGPA / 5.00" },
               ].map((stat) => (
                 <div key={stat.label} className="glass-panel rounded-2xl p-5">
                   <p className="font-display text-3xl font-black tracking-[-0.05em] text-[#F8FAFC]">

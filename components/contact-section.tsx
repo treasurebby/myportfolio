@@ -24,7 +24,7 @@ export default function ContactSection() {
         <div className="max-w-2xl">
           <p className="text-sm uppercase tracking-[0.4em] text-[#64748B]">Contact</p>
           <h2 className="mt-4 font-display text-3xl font-black tracking-[-0.05em] text-[#F8FAFC] sm:text-4xl">
-            Open to internships and junior cloud-backend roles.
+            Open to software engineering and cloud-backend opportunities.
           </h2>
           <p className="mt-5 text-base leading-7 text-[#CBD5E1]">
             Share the problem, the constraints, and the timeline. I&apos;ll respond with a practical plan
@@ -47,7 +47,16 @@ export default function ContactSection() {
             Email me directly
           </a>
 
-          <div className="mt-8 flex flex-wrap gap-4 text-sm text-[#94A3B8]">
+          <div className="mt-8 grid gap-2 text-sm text-[#94A3B8]">
+            <p>Lagos, Nigeria</p>
+            <p>
+              <a className="transition hover:text-[#E2E8F0]" href="tel:+2349063236603">
+                +234 906 323 6603
+              </a>
+            </p>
+          </div>
+
+          <div className="mt-6 flex flex-wrap gap-4 text-sm text-[#94A3B8]">
             <a className="transition hover:text-[#E2E8F0]" href="https://github.com/treasurebby" target="_blank" rel="noopener noreferrer">
               GitHub
             </a>
@@ -67,12 +76,24 @@ export default function ContactSection() {
           viewport={{ once: true, amount: 0.2 }}
           onSubmit={(event) => {
             event.preventDefault();
+            const form = event.currentTarget;
+            const formData = new FormData(form);
+            const name = String(formData.get("name") ?? "").trim();
+            const email = String(formData.get("email") ?? "").trim();
+            const body = String(formData.get("message") ?? "").trim();
+
+            const subject = encodeURIComponent(`Portfolio contact from ${name}`);
+            const mailBody = encodeURIComponent(
+              `Name: ${name}\nEmail: ${email}\n\n${body}`,
+            );
+
+            window.location.href = `mailto:ehiomhentreasureruth@gmail.com?subject=${subject}&body=${mailBody}`;
             setHasSubmitted(true);
           }}
           className="glass-panel rounded-[1.5rem] p-5"
         >
           <p className="mb-4 text-sm text-[#94A3B8]">
-            Prefer a form? Share your project details below.
+            Prefer a form? Share your details and it&apos;ll open a direct email to me.
           </p>
 
           <div className="grid gap-4">
@@ -123,12 +144,13 @@ export default function ContactSection() {
             whileTap="tap"
             className="mt-5 inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-[#E2E8F0] to-[#94A3B8] px-5 py-3 text-sm font-semibold text-[#0A0F1E] shadow-glow transition hover:brightness-110"
           >
-            Send project details
+            Send email to ehiomhentreasureruth@gmail.com
           </motion.button>
 
           {hasSubmitted ? (
             <p className="mt-4 text-sm text-[#94A3B8]">
-              Thanks for reaching out. For a faster response, email me directly at ehiomhentreasureruth@gmail.com.
+              Your email app should be open with a draft to ehiomhentreasureruth@gmail.com. If it
+              didn&apos;t open, you can email me directly.
             </p>
           ) : null}
         </motion.form>
