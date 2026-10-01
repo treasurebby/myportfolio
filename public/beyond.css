@@ -18,13 +18,13 @@
 .leadership-copy h3 { font-size:20px; font-weight:450; line-height:1.25; margin:9px 0; letter-spacing:-.4px; }
 .leadership-copy p { color:var(--muted); font-size:13px; margin:0; }
 .leadership-copy .pill { margin-top:18px; }
-.mentorship-card { width:min(100%, 760px); display:grid; grid-template-columns:180px 1fr; align-items:stretch; border:1px solid var(--line); border-radius:15px; overflow:hidden; background:var(--surface); box-shadow:var(--shadow); }
-.mentorship-logo { display:grid; place-items:center; padding:22px; background:#101828; }
-.mentorship-logo img { width:min(100%, 220px); height:auto; object-fit:contain; }
-.mentorship-copy { padding:22px 25px; }
-.mentorship-copy h3 { font-size:21px; font-weight:450; line-height:1.25; margin:8px 0 6px; letter-spacing:-.4px; }
+.mentorship-card { width:min(100%, 600px); display:grid; grid-template-columns:135px 1fr; align-items:stretch; border:1px solid var(--line); border-radius:13px; overflow:hidden; background:var(--surface); box-shadow:var(--shadow); }
+.mentorship-logo { display:grid; place-items:center; padding:17px; background:#101828; }
+.mentorship-logo img { width:min(100%, 170px); height:auto; object-fit:contain; }
+.mentorship-copy { padding:17px 20px; }
+.mentorship-copy h3 { font-size:19px; font-weight:450; line-height:1.25; margin:6px 0 4px; letter-spacing:-.3px; }
 .mentorship-copy p { color:var(--muted); font-size:13px; line-height:1.6; max-width:420px; margin:0; }
-.mentorship-link { display:inline-block; margin-top:14px; color:var(--accent); font-size:12px; }
+.mentorship-link { display:inline-block; margin-top:10px; color:var(--accent); font-size:12px; }
 .community-list { display:grid; grid-template-columns:1fr 1fr; gap:0 32px; }
 .community-row { display:flex; align-items:center; gap:16px; padding:23px 0; border-top:1px solid var(--line); }
 .community-mark { flex-shrink:0; width:43px; height:43px; display:grid; place-items:center; border-radius:12px; background:var(--soft); color:var(--accent); font-family:Newsreader,Georgia,serif; font-size:24px; }
@@ -50,8 +50,8 @@
   .leadership-logo.korabyte img { object-fit:contain; background:#e9eef1; }
   .leadership-copy { padding:22px 18px; }
   .mentorship-card { grid-template-columns:1fr; }
-  .mentorship-logo { min-height:105px; padding:22px; }
-  .mentorship-copy { padding:22px 18px; }
+  .mentorship-logo { min-height:88px; padding:18px; }
+  .mentorship-copy { padding:18px; }
   .community-list { grid-template-columns:1fr; }
   .beyond-intro { padding-top:30px; }
   .beyond-intro>p:last-of-type { font-size:22px; }
