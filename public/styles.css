@@ -116,6 +116,15 @@ svg {
   line-height:1;
 }
 
+.wordmark span {
+  font-family:Outfit,sans-serif;
+  font-size:25px;
+  color:var(--accent);
+  font-style:normal;
+  display:inline-block;
+  transform:translate(3px,-10px);
+}
+
 nav {
   display:flex;
   gap:28px;
@@ -240,6 +249,14 @@ nav a {
   font-style:italic;
   font-size:17px;
   transform:rotate(-7deg);
+}
+
+.avatar-note span {
+  display:inline-block;
+  font-family:Newsreader,Georgia,serif;
+  font-size:31px;
+  transform:rotate(22deg);
+  margin-left:12px;
 }
 
 
@@ -605,6 +622,7 @@ h1>span {
   color:#b77af0;
   font-size:124px;
   line-height:1;
+  font-family:Newsreader,Georgia,serif;
   transform:rotate(12deg);
   font-family:Georgia,serif;
 }
@@ -972,6 +990,7 @@ h1>span {
   position:absolute;
   font-size:170px;
   right:-27px;
+  font-family:Newsreader,Georgia,serif;
   top:65px;
   line-height:1;
   color:#dda7c0;
@@ -1041,6 +1060,7 @@ h1>span {
   font-size:55px;
   color:var(--accent);
   line-height:1;
+  font-family:Newsreader,Georgia,serif;
   transform:rotate(10deg);
 }
 
@@ -1088,6 +1108,7 @@ h1>span {
 .footer-text>a>span {
   color:var(--accent);
   margin-left:8px;
+  font-family:Newsreader,Georgia,serif;
 }
 
 .beach {
@@ -1292,6 +1313,10 @@ h1>span {
     left:12px;
     bottom:-6px;
     font-size:12px;
+  }
+  .avatar-note span {
+    font-size:24px;
+    margin-left:4px;
   }
   .eyebrow {
     font-size:6px;
