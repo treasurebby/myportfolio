@@ -704,22 +704,24 @@ h1>span {
   font-weight:600;
 }
 
+.company-mark img {
+  width:100%;
+  height:100%;
+  padding:5px;
+  object-fit:contain;
+  border-radius:inherit;
+}
+
 .interswitch {
-  background:#00485a;
-  color:#f14d43;
-  font-style:italic;
-  font-family:Georgia,serif;
+  background:#fff;
 }
 
 .addosser {
-  background:#f7efca;
-  color:#81742c;
-  font-family:Georgia,serif;
+  background:#fff;
 }
 
 .covenda {
-  background:#fff0e9;
-  color:#e46038;
+  background:#fff;
 }
 
 .experience-name {

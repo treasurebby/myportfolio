@@ -27,5 +27,11 @@ The three project graphics and talk card are CSS/typographic illustrations, not 
 - `public/assets/korabyte.jpg` and `public/assets/prime.jpg`: original images supplied by the user, copied unchanged.
 - `public/assets/aws.svg`: logo SVG extracted from the [official AWS homepage](https://aws.amazon.com/), used to identify the user's AWS student community role.
 - `public/assets/covenant.png`: Covenant University crest from its [ORCID member listing](https://orcid.org/members/001Pm00000FyVYAIA3), matching the supplied university logo reference. [Image source](https://orcid-member-logos.s3.us-east-2.amazonaws.com/CU_LOGO.png).
+- `public/assets/interswitch.png`, `public/assets/addosser.jpg`, and `public/assets/covenda.png`: supplied company logo references, copied unchanged.
+- `public/assets/cowrywise.png`: Cowrywise favicon from the [official Cowrywise site](https://www.cowrywise.com/).
+- `public/assets/google-developers.svg`: Google for Developers lockup from the [official Google Developers community site](https://developers.google.com/community).
+- `public/assets/enactus.png`: Enactus mark from the [official Enactus site](https://enactus.org/).
+- `public/assets/hebron-startup-lab.png`: Hebron Startup Lab mark from the [organisation's official site](https://hebronstartup.com/).
+- `public/assets/bigtheta.png`: BigTheta wordmark from the [official BigTheta site](https://bigtheta.org/).
 
 Organisation marks identify the listed affiliations; they are not generated artwork.

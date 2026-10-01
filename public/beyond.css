@@ -18,9 +18,21 @@
 .leadership-copy h3 { font-size:20px; font-weight:450; line-height:1.25; margin:9px 0; letter-spacing:-.4px; }
 .leadership-copy p { color:var(--muted); font-size:13px; margin:0; }
 .leadership-copy .pill { margin-top:18px; }
+.mentorship-card { display:grid; grid-template-columns:minmax(220px, .8fr) 1fr; align-items:stretch; border:1px solid var(--line); border-radius:17px; overflow:hidden; background:var(--surface); box-shadow:var(--shadow); }
+.mentorship-logo { display:grid; place-items:center; padding:32px; background:#101828; }
+.mentorship-logo img { width:min(100%, 300px); height:auto; object-fit:contain; }
+.mentorship-copy { padding:28px; }
+.mentorship-copy h3 { font-size:24px; font-weight:450; line-height:1.25; margin:10px 0 8px; letter-spacing:-.4px; }
+.mentorship-copy p { color:var(--muted); font-size:13px; line-height:1.6; max-width:420px; margin:0; }
 .community-list { display:grid; grid-template-columns:1fr 1fr; gap:0 32px; }
 .community-row { display:flex; align-items:center; gap:16px; padding:23px 0; border-top:1px solid var(--line); }
 .community-mark { flex-shrink:0; width:43px; height:43px; display:grid; place-items:center; border-radius:12px; background:var(--soft); color:var(--accent); font-family:Newsreader,Georgia,serif; font-size:24px; }
+.community-mark img { width:100%; height:100%; padding:7px; object-fit:contain; border-radius:inherit; }
+.community-mark.cowrywise { background:#effaf4; }
+.community-mark.hebron { background:#f3f5f7; }
+.community-mark.gdg { background:#fff; border:1px solid var(--line); }
+.community-mark.gdg img { padding:8px 4px; }
+.community-mark.enactus { background:#f3f3f3; }
 .community-row h3 { font-size:16px; font-weight:450; margin:0 0 3px; }
 .community-row p { color:var(--muted); font-size:12px; margin:0; }
 .community-date { font-size:11px; color:var(--muted); }
@@ -36,6 +48,9 @@
   .leadership-logo { height:100%; min-height:175px; }
   .leadership-logo.korabyte img { object-fit:contain; background:#e9eef1; }
   .leadership-copy { padding:22px 18px; }
+  .mentorship-card { grid-template-columns:1fr; }
+  .mentorship-logo { min-height:125px; padding:26px; }
+  .mentorship-copy { padding:22px 18px; }
   .community-list { grid-template-columns:1fr; }
   .beyond-intro { padding-top:30px; }
   .beyond-intro>p:last-of-type { font-size:22px; }
