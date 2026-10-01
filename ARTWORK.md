@@ -31,7 +31,7 @@ The three project graphics and talk card are CSS/typographic illustrations, not 
 - `public/assets/cowrywise.png`: Cowrywise favicon from the [official Cowrywise site](https://www.cowrywise.com/).
 - `public/assets/google-developers.svg`: Google for Developers lockup from the [official Google Developers community site](https://developers.google.com/community).
 - `public/assets/enactus.png`: Enactus mark from the [official Enactus site](https://enactus.org/).
-- `public/assets/hebron-startup-lab.png`: Hebron Startup Lab mark from the [organisation's official site](https://hebronstartup.com/).
+- `public/assets/hsl-logo.png`: Hebron Startup Lab logo supplied by the user, copied unchanged.
 - `public/assets/bigtheta.png`: BigTheta wordmark from the [official BigTheta site](https://bigtheta.org/).
 
 Organisation marks identify the listed affiliations; they are not generated artwork.

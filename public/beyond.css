@@ -30,7 +30,8 @@
 .community-mark { flex-shrink:0; width:43px; height:43px; display:grid; place-items:center; border-radius:12px; background:var(--soft); color:var(--accent); font-family:Newsreader,Georgia,serif; font-size:24px; }
 .community-mark img { width:100%; height:100%; padding:7px; object-fit:contain; border-radius:inherit; }
 .community-mark.cowrywise { background:#effaf4; }
-.community-mark.hebron { background:#f3f5f7; }
+.community-mark.hebron { background:#080808; }
+.community-mark.hebron img { padding:0; }
 .community-mark.gdg { background:#fff; border:1px solid var(--line); }
 .community-mark.gdg img { padding:8px 4px; }
 .community-mark.enactus { background:#f3f3f3; }
